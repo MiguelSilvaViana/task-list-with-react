@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 
 import { FaPlus, FaEdit, FaWindowClose } from 'react-icons/fa';
 
@@ -6,10 +6,21 @@ import './Main.css';
 
 function Main() {
   const [task, setTask] = useState([]);
-  const [newTask, setNewTask] = useState('');
+  const [newTask, setNewTask] = useState(null);
   const [edit, setEdit] = useState(false);
   const [editIndex, setEditIndex] = useState(-1);
   const inputRef = useRef(null);
+
+  // loading the components of the localStorage
+  useEffect(() => {
+    const taskInLocalStorage = localStorage.getItem('tasks');
+    // console.log('loading tasks', taskInLocalStorage);
+    if (taskInLocalStorage) setTask(JSON.parse(taskInLocalStorage));
+  }, []);
+
+  useEffect(() => {
+    if (newTask === '') localStorage.setItem('tasks', JSON.stringify(task));
+  }, [task]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -40,6 +51,7 @@ function Main() {
   };
 
   const handleDelete = (e, index) => {
+    setNewTask('');
     const remove = [...task];
     remove.splice(index, 1);
     setTask([...remove]);
@@ -76,14 +88,5 @@ function Main() {
     </div>
   );
 }
-
-/*
-className
-ul => tarefas
-edit => edit
-delete => delete
-form => form
-div principal => main
-*/
 
 export default Main;
