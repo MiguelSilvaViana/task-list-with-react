@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 
-import { FaPlus, FaEdit, FaWindowClose } from 'react-icons/fa';
+import Form from './Form/Index';
+import Tasks from './Tasks/index';
 
 import './Main.css';
 
@@ -60,31 +61,14 @@ function Main() {
   return (
     <div className="main">
       <h1>Task List</h1>
-      <form action="#" onSubmit={handleSubmit} className="form">
-        <input
-          type="text"
-          onChange={handleChange}
-          value={newTask || ''}
-          ref={inputRef}
-        />
-        <button type="submit">
-          <FaPlus />
-        </button>
-      </form>
-      <ul className="tarefas">
-        {task.map((tasks, index) => (
-          <li key={tasks}>
-            {tasks}
-            <span>
-              <FaEdit className="edit" onClick={(e) => handleEdit(e, index)} />
-              <FaWindowClose
-                className="delete"
-                onClick={(e) => handleDelete(e, index)}
-              />
-            </span>
-          </li>
-        ))}
-      </ul>
+
+      <Form
+        handleSubmit={handleSubmit}
+        handleChange={handleChange}
+        newTask={newTask}
+        inputRef={inputRef}
+      />
+      <Tasks handleDelete={handleDelete} handleEdit={handleEdit} task={task} />
     </div>
   );
 }
