@@ -1,8 +1,13 @@
-# Read Me Template
+# Task List With React
 
-![Project Image](project-image-url)
+![image](https://user-images.githubusercontent.com/96927347/211233718-025f3420-c102-4d5c-8f9e-6554fea3ba47.png)
+![image](https://user-images.githubusercontent.com/96927347/211233759-cd132827-b9c2-46a0-a0a6-1776e22aba60.png)
+![image](https://user-images.githubusercontent.com/96927347/211233797-77fc798d-1de8-4e45-bff6-b51633e68749.png)
+![image](https://user-images.githubusercontent.com/96927347/211233810-3fdbd9f6-0665-479c-ba53-f739bbf47119.png)
+![image](https://user-images.githubusercontent.com/96927347/211233819-23cb41e1-0eb5-4c2e-9162-245252a5af08.png)
 
-> This is a ReadMe template to help save you time and effort.
+
+
 
 ---
 
@@ -11,42 +16,31 @@ You're sections headers will be used to reference location of destination.
 
 - [Description](#description)
 - [How To Use](#how-to-use)
-- [References](#references)
 - [License](#license)
-- [Author Info](#author-info)
 
 ---
 
 ## Description
 
-Creating ReadMe's for your Github repository can be tedious.  I hope this template can save you time and effort as well as provide you with some consistency across your projects.
+A schedule with react that has options to create a new task, delete or delete existing tasks, where all data is saved in the browser's localstorage, so if you close the browser or access this page another day, your tasks will still be saved in the browser's localstorage
+
 
 #### Technologies
 
-- Technology 1
-- Technology 2
+- React
+- Javascript
 
-[Back To The Top](#read-me-template)
+[Back To The Top](#task-list-with-react)
 
 ---
 
 ## How To Use
 
 #### Installation
-
-
-
-#### API Reference
-
-```html
-    <p>dummy code</p>
-```
-[Back To The Top](#read-me-template)
-
----
-
-## References
-[Back To The Top](#read-me-template)
+To install the project dependencies type:\
+`pnpm i`\
+Then, to start the project, run:\
+`pnpm run dev`
 
 ---
 
@@ -54,7 +48,7 @@ Creating ReadMe's for your Github repository can be tedious.  I hope this templa
 
 MIT License
 
-Copyright (c) [2017] [James Q Quick]
+Copyright (c) [2022] [MgL]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -74,13 +68,4 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-[Back To The Top](#read-me-template)
-
----
-
-## Author Info
-
-- Twitter - [@jamesqquick](https://twitter.com/jamesqquick)
-- Website - [James Q Quick](https://jamesqquick.com)
-
-[Back To The Top](#read-me-template)
+[Back To The Top](#task-list-with-react)
